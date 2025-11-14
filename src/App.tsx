@@ -5,7 +5,10 @@ import { Alliance } from "./components/Alliance";
 import { Archive } from "./components/Archive";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
+import { Career } from "./components/Career";
 import { Footer } from "./components/Footer";
+
+import './styles/globals.css'
 
 export default function App() {
   return (
@@ -18,6 +21,7 @@ export default function App() {
         <Alliance />
         <Archive />
         <Contact />
+        <Career />
       </main>
       <Footer />
     </div>

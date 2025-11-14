@@ -1,46 +1,40 @@
+import logo from "../assets/jpee_newlogo.png";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-[#0072ce] text-white p-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex flex-col gap-0.5">
-                <div className="h-1 w-8 bg-blue-600"></div>
-                <div className="h-1 w-8 bg-white"></div>
-                <div className="h-1 w-8 bg-gray-600"></div>
-              </div>
-              <span className="tracking-wider">JPEE</span>
-            </div>
-            <p className="text-gray-400 text-sm">
-              エストニアと日本を文化的に草の根でつなぐ
+            <img src={logo} alt="JPEE" className="h-14 mb-3 w-auto"/>
+            <p className="text-white text-sm">
+              ITとコミュニケーションで欧州と日本を「近く」する
             </p>
           </div>
 
           <div>
-            <h4 className="mb-4">リンク</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#about" className="hover:text-white transition-colors">JPEEについて</a></li>
-              <li><a href="#activities" className="hover:text-white transition-colors">活動内容</a></li>
-              <li><a href="#alliance" className="hover:text-white transition-colors">JPEE同盟</a></li>
-              <li><a href="#archive" className="hover:text-white transition-colors">アーカイブ</a></li>
+            <h4 className="mb-5">活動を知る</h4>
+            <ul className="space-y-2 text-sm text-white ">
+              <li><a href="#about" className="text-white hover:text-[#003256] transition-colors">私たちの活動</a></li>
+              <li><a href="#activities" className="text-white hover:text-[#003256] transition-colors">活動内容</a></li>
+              <li><a href="#alliance" className="text-white hover:text-[#003256] transition-colors">JPEE同盟</a></li>
+              <li><a href="#archive" className="text-white hover:text-[#003256] transition-colors">エストニア・アンソロジーの軌跡</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4">参加する</h4>
+            <h4 className="mb-5">フォロー・参加する</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#contact" className="hover:text-white transition-colors">Discord</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Note</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">お問い合わせ</a></li>
+              <li><a href="#contact" className="text-white hover:text-[#003256] transition-colors">活動をフォローする</a></li>
+              <li><a href="#career" className="text-white hover:text-[#003256] transition-colors">メンバー募集</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {currentYear} JPEE. All rights reserved.</p>
+        <div className="border-t pt-8 text-center text-sm text-white">
+          <p>&copy; 2025 JPEE. All rights reserved.</p>
         </div>
       </div>
     </footer>

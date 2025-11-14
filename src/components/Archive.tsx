@@ -1,73 +1,93 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Book, Calendar } from "lucide-react";
+import books1 from "../assets/books1.jpg";
+import books2 from "../assets/books2.jpg";
+import books3 from "../assets/est_lang_book2.jpg";
+import books4 from "../assets/est_lang_book3.jpg";
+import { useState } from "react";
 
 export function Archive() {
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
+
   return (
-    <section id="archive" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="archive" className="py-15 bg-gray-50">
+      <div className="max-w-7xl mt-5 mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="text-center mb-12">
-          <h2 className="mb-4">アーカイブ</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            これまでの活動を振り返ります。
-            5年間にわたり発行してきた同人アンソロジー本の記録です。
+          <h2 className="mb-4 text-[#0072ce] text-xl font-bold">エストニア・アンソロジーの軌跡</h2>
+          <p className="text-black max-w-2xl mx-auto">
+            5年間にわたり発行してきた、エストニアがテーマの同人アンソロジー本の記録です。<br />
+            エストニア在住の日本人やエストニア人、旅行者、エストニアに関心を持つ日本人が寄稿し、多様な視点からエストニアを紹介してきました。<br />
+            当時は「色んな人のエストニア体験が聞きたい」という自分たちの興味関心から始まりましたが、
+            つながりを作りたいという気持ちはこの活動を通じて育まれてきました。
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-            <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1760869028228-462a61e21644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMGV4Y2hhbmdlJTIwYm9va3N8ZW58MXx8fHwxNzYxNTg3MTM0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Books archive"
-              className="w-full h-full object-cover"
+        <div className="grid md:grid-cols-2 gap-12 items-start m-10">
+
+          <div className="space-y-6 text-center">
+            <img
+              src={hover1 ? books2 : books1}
+              alt="JPEEエストニア・アンソロジー"
+              className="w-full h-70 object-cover rounded-lg"
+              onMouseEnter={() => setHover1(true)}
+              onMouseLeave={() => setHover1(false)}
+            />
+            <img
+              src={hover2 ? books4 : books3}
+              alt="JPEEエストニア・アンソロジー"
+              className="w-full h-70 object-cover rounded-lg"
+              onMouseEnter={() => setHover2(true)}
+              onMouseLeave={() => setHover2(false)}
             />
           </div>
-          
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Book className="text-white" size={24} />
-                </div>
-              </div>
-              <div>
-                <h3 className="mb-2">エストニア同人アンソロジー</h3>
-                <p className="text-gray-600">
-                  エストニアについて自由なテーマで書いた同人アンソロジー本。
-                  文化、歴史、IT、生活、旅行記など、多様な視点からエストニアを紹介してきました。
-                </p>
-              </div>
-            </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
-                  <Calendar className="text-white" size={24} />
-                </div>
-              </div>
-              <div>
-                <h3 className="mb-2">5年間の活動</h3>
-                <p className="text-gray-600">
-                  同人とオタク活動をエストニアやヨーロッパで広めつつ、
-                  エストニアと日本をつなぐ活動を展開。現在は新しい形での文化交流にシフトしています。
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <p className="text-sm text-gray-600 mb-4">
-                これまでに発行した同人誌は引き続き販売しています。
-                ご興味のある方はお問い合わせください。
-              </p>
-              <a 
-                href="#contact"
-                className="text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center gap-2"
-              >
-                同人誌について問い合わせる
-                <span>→</span>
-              </a>
-            </div>
+          <div className="space-y-6 text-black">
+            <p>
+              JPEEエストニア・アンソロジーは、様々な寄稿者が各々の「エストニア」について自由なテーマで書いた同人アンソロジー本です。
+              2019年から2024年までの5年間にわたり毎年1冊ずつ刊行、在住者の日々の生活の様子から旅行記、文化や歴史、ITや軍事といった専門的な内容まで多様な視点からエストニアを紹介してきました。
+            </p>
+            <p>
+              その制作活動をする中で、ただ本を出すだけでなくより多くの人に読んでもらいエストニアに興味を持ってもらいたい。
+              また執筆者にただ書いてもらって終わりではなく、共通項を通じてもっとつながりたい。
+              そして更に、読者と情報発信者が交流することで、エストニアと日本の間で文化的・人的なつながりを深める助けに少しでもなれば、という思いで活動してきました。
+              これが発展し、欧州と日本をつなぐJPEEの今の活動につながっています。
+            </p>
+            <p>
+              現地での日本文化発信イベントに参加したり、日本語では珍しいエストニア語学習の補助教材を制作したりと、アンソロジー本の枠を超えた活動も行っています。
+            </p>
           </div>
         </div>
+
+        <div className="max-w-3xl mx-auto bg-white p-6 rounded-md border border-gray-300 text-center">
+
+          <p className="mb-3 text-black">
+            本誌や関連グッズは各種通販サイトにて取り扱い中です。ぜひご覧ください。
+          </p>
+
+          <div className="flex flex-row items-center text-center justify-center gap-6">
+
+            <a
+              href="https://jpee.booth.pm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 m-4 bg-[#ff5c67] text-white rounded-md hover:bg-[#da4e58] transition-colors"
+            >
+              BOOTHでチェック
+            </a>
+
+            <a
+              href="https://www.amazon.co.jp/s?i=digital-text&rh=p_27%3AJPEE%25E7%25B7%25A8%25E9%259B%2586%25E9%2583%25A8&s=relevancerank&language=en&text=JPEE%E7%B7%A8%E9%9B%86%E9%83%A8&ref=dp_byline_sr_ebooks_1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 bg-[#FF9900] text-white rounded-md hover:bg-[#e67e22] transition-colors"
+            >
+              Amazon Kindleでチェック
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   );

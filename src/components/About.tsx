@@ -2,38 +2,33 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-20 px-10 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div>
-            <h2 className="mb-6">JPEEについて</h2>
-            <div className="space-y-4 text-gray-700">
+            <h2 className="mb-6 text-[#0072ce] text-xl font-bold">私たちの活動</h2>
+            <div className="space-y-4 text-black">
               <p>
-                JPEEは「エストニアと日本を文化的に草の根でつなぐ」をミッションに掲げる文化交流コミュニティです。
+                JPEEは「エストニアを拠点に、欧州と日本をつなぐ」をミッションに掲げて活動しています。
               </p>
               <p>
                 当初はエストニアについて自由なテーマで書いた同人アンソロジー本の編集部として活動を開始。
-                5年間にわたり本を発行し、「同人とオタク活動をエストニアやヨーロッパで広めつつ、エストニアと日本をつなぐ」活動を展開してきました。
+                5年にわたり本を発行し、現地文化活動への参加やオフ会の開催なども行いながら、
+                在エストニア邦人、日本に興味のあるエストニア人、エストニアが好きな日本人などを対象に
+                「縛りすぎない、でもつながれるで、エストニアと日本の草の根文化交流を促進する」を目標に
+                活動してきました。
               </p>
               <p>
-                現在は、より多様な形での文化交流を目指し、Discordコミュニティ、Note、ラジオなど、
-                オンラインとオフラインを組み合わせた活動に移行しています。
+                現在はより広く多様な在り方を目指し、エストニアだけでなく欧州全体への活動拡大や、
+                Discordコミュニティ運営、NoteやラジオといったWeb媒体やVR空間へも進出中。
+                国境を越え、オンライン空間でのつながりも重視する活動に移行しています。
               </p>
               <p>
-                エストニアに興���がある方、在エストニア邦人の方、日本に興味のあるエストニア人の方など、
-                どなたでも気軽に参加できるオープンなコミュニティです。
+                ヨーロッパにお住まいの方、ヨーロッパに興味がある方、日本に興味のある外国人の方。
+                状況や場所は違っても、同じ方向を向いてともに歩むことを目指した活動を行います。
               </p>
             </div>
           </div>
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-            <ImageWithFallback 
-              src="https://images.unsplash.com/photo-1759932021109-ffbec9251f9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBjb25uZWN0aW9uJTIwbmV0d29ya3xlbnwxfHx8fDE3NjE1ODcxMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Community connection"
-              className="w-full h-full object-cover"
-            />
-          </div>
         </div>
-      </div>
     </section>
   );
 }
