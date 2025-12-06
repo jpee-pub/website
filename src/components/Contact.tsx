@@ -14,7 +14,7 @@ const contactMethods = [
     title: "お問い合わせ",
     description: "コラボレーションや業務提携、活動内容に関する相談はこちらからどうぞ。",
     action: "問い合わせる",
-    link: "mailto:jpee.pub@gmail.com"
+    link: "mailto:contact@jpee-plus.com"
   },
   {
     icon: Briefcase,
