@@ -3,6 +3,7 @@ import { About } from "./components/About";
 import { Activities } from "./components/Activities";
 import { Alliance } from "./components/Alliance";
 import { Archive } from "./components/Archive";
+import { MemberGreeting } from "./components/MemberGreeting";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { Career } from "./components/Career";
@@ -20,6 +21,7 @@ export default function App() {
         <Activities />
         <Alliance />
         <Archive />
+        <MemberGreeting />
         <Contact />
         <Career />
       </main>

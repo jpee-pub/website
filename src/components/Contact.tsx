@@ -27,7 +27,7 @@ const contactMethods = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="mb-4 text-[#0072ce] text-xl font-bold">参加する</h2>
@@ -45,16 +45,16 @@ export function Contact() {
                 href={method.link}
                 className="block h-full"
               >
-              <Card
-                key={index}
-                className="p-6 hover:bg-[#0072ce] hover:text-white flex flex-col items-center text-center transition-colors"
-              >
-                <div className="rounded-lg flex items-center justify-center">
-                  <Icon className="hover:text-white" size={24} />
-                </div>
-                <h3>{method.title}</h3>
-                <p className="hover:text-white text-sm mb-6">{method.description}</p>
-              </Card>
+                <Card
+                  key={index}
+                  className="p-6 hover:bg-[#0072ce] hover:text-white flex flex-col items-center text-center transition-colors"
+                >
+                  <div className="rounded-lg flex items-center justify-center">
+                    <Icon className="hover:text-white" size={24} />
+                  </div>
+                  <h3>{method.title}</h3>
+                  <p className="hover:text-white text-sm mb-6">{method.description}</p>
+                </Card>
               </a>
             );
           })}
