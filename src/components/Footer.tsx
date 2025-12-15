@@ -1,4 +1,4 @@
-import logo from "../assets/jpee_newlogo.png";
+import logo from "../assets/jpee+_logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={logo} alt="JPEE" className="h-14 mb-3 w-auto"/>
+            <img src={logo} alt="JPEE" className="h-14 mb-3 w-auto" />
             <p className="text-white text-sm">
               ITとコミュニケーションで欧州と日本を「近く」する
             </p>

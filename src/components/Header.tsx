@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/jpee_small_logo.png";
+import logo from "../assets/jpee+_logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
