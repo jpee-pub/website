@@ -32,7 +32,7 @@ export function Contact() {
         <div className="text-center mb-12">
           <h2 className="mb-4 text-[#0072ce] text-xl font-bold">参加する</h2>
           <p className="text-black max-w-2xl mx-auto">
-            JPEEの活動に興味を持っていただきありがとうございます。<br />
+            JPEE+の活動に興味を持っていただきありがとうございます。<br />
             活動のフォローや参加、コラボレーションのご提案などお待ちしています。
           </p>
         </div>
@@ -45,16 +45,16 @@ export function Contact() {
                 href={method.link}
                 className="block h-full"
               >
-              <Card
-                key={index}
-                className="p-6 hover:bg-[#0072ce] hover:text-white flex flex-col items-center text-center transition-colors"
-              >
-                <div className="rounded-lg flex items-center justify-center">
-                  <Icon className="hover:text-white" size={24} />
-                </div>
-                <h3>{method.title}</h3>
-                <p className="hover:text-white text-sm mb-6">{method.description}</p>
-              </Card>
+                <Card
+                  key={index}
+                  className="p-6 hover:bg-[#0072ce] hover:text-white flex flex-col items-center text-center transition-colors"
+                >
+                  <div className="rounded-lg flex items-center justify-center">
+                    <Icon className="hover:text-white" size={24} />
+                  </div>
+                  <h3>{method.title}</h3>
+                  <p className="hover:text-white text-sm mb-6">{method.description}</p>
+                </Card>
               </a>
             );
           })}

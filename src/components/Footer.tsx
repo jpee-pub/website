@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={logo} alt="JPEE" className="h-14 mb-3 w-auto" />
+            <img src={logo} alt="JPEE+" className="h-14 mb-3 w-auto" />
             <p className="text-white text-sm">
               ITとコミュニケーションで欧州と日本を「近く」する
             </p>
@@ -19,7 +19,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white ">
               <li><a href="#about" className="text-white hover:text-[#003256] transition-colors">私たちの活動</a></li>
               <li><a href="#activities" className="text-white hover:text-[#003256] transition-colors">活動内容</a></li>
-              <li><a href="#alliance" className="text-white hover:text-[#003256] transition-colors">JPEE同盟</a></li>
+              <li><a href="#alliance" className="text-white hover:text-[#003256] transition-colors">JPEE+同盟</a></li>
               <li><a href="#archive" className="text-white hover:text-[#003256] transition-colors">エストニア・アンソロジーの軌跡</a></li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div className="border-t pt-8 text-center text-sm text-white">
-          <p>&copy; 2025 JPEE. All rights reserved.</p>
+          <p>&copy; 2025 JPEE+. All rights reserved.</p>
         </div>
       </div>
     </footer>

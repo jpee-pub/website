@@ -34,14 +34,14 @@ export function Hero() {
 
             <p className="max-w-2xl mx-auto mb-8">
               <br />
-              「エストニア」をキーワードに誰もが参加できるコミュニティとして始まったJPEEは、<br />
+              「エストニア」をキーワードに誰もが参加できるコミュニティとして始まったJPEE+は、<br />
               現在では欧州と日本を多岐にわたる分野でつなぐ活動を促進しています。<br />
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#alliance"
                 className="bg-[#0072ce] text-white px-8 py-3 rounded-md hover:bg-[#005bb5] transition-colors">
-                JPEE同盟に参加
+                JPEE+同盟に参加
               </a>
               <a href="#about"
                 className="bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-md hover:bg-white/20 transition-colors border border-white/30">
@@ -65,7 +65,7 @@ export function Hero() {
             </p>
 
             <p className="max-w-2xl mx-auto mb-8">
-              JPEEでは一緒に活動してくれる仲間を募集しています。<br />
+              JPEE+では一緒に活動してくれる仲間を募集しています。<br />
               旅好きなあなたも、メタバースに夢中なあなたも。<br />
               世界のどこにいても、テクノロジーとコミュニケーションで未来をつくります！
             </p>
@@ -137,10 +137,10 @@ export function Hero() {
                 className="h-30 m-4 object-cover rounded-lg"
               />
             </div>
-            
+
 
             <p className="max-w-2xl mx-auto m-4">
-              JPEEの活動は、「エストニア」がテーマの同人アンソロジーとして始まりました。<br />
+              JPEE+の活動は、「エストニア」がテーマの同人アンソロジーとして始まりました。<br />
               5年にわたる制作活動と寄稿者の方との関わりを通じ、現在の活動の基礎が築かれました。
               生活、旅行記、文化や歴史、ITや軍事といった多様な視点のエストニアをぜひご覧ください。
             </p>
