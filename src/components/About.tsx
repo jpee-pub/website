@@ -8,7 +8,7 @@ export function About() {
           <h2 className="mb-6 text-[#0072ce] text-xl font-bold">私たちの活動</h2>
           <div className="space-y-4 text-black">
             <p>
-              JPEE+は「エストニアを拠点に、欧州と日本をつなぐ」をミッションに掲げて活動しています。
+              JPEE+は「欧州と日本をつなぐ」をミッションに掲げて活動しています。
             </p>
             <p>
               当初はエストニアについて自由なテーマで書いた同人アンソロジー本の編集部として活動を開始。

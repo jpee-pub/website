@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
 import clusterLogo from "../assets/cluster.png";
+import { UserPlus } from "lucide-react";
 
 const DiscordIcon = () => (
   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -27,6 +28,10 @@ const YoutubeIcon = () => (
 
 const ClusterIcon = () => (
   <img src={clusterLogo} alt="Cluster" className="w-full h-full object-cover" />
+);
+
+const OtherSNSIcon = () => (
+  <UserPlus className="w-6 h-6" color="#ffffff" />
 );
 
 const activities = [
@@ -69,6 +74,20 @@ const activities = [
     status: "活動中",
     link: "https://cluster.mu/en/u/JPEE_plus",
     color: "overflow-hidden"
+  },
+  {
+    icon: OtherSNSIcon,
+    title: "その他SNS",
+    description: (
+      <>
+        <a href="https://x.com/jpee_plus" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">X</a>、
+        <a href="https://www.instagram.com/jpee.plus/" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Instagram</a>、
+        <a href="https://www.threads.net/@jpee.plus" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Threads</a>、
+        <a href="https://www.facebook.com/jpee.plus" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Facebook</a>など、各種SNSで情報発信中！
+      </>
+    ),
+    status: "活動中",
+    color: "bg-gray-400"
   }
 ];
 
@@ -86,7 +105,19 @@ export function Activities() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {activities.map((activity, index) => {
             const Icon = activity.icon;
-            return (
+            const cardContent = (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow h-full">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`${activity.color} w-12 h-12 rounded-lg flex items-center justify-center shrink-0`}>
+                    <Icon />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#0072ce]">{activity.title}</h3>
+                </div>
+                <div className="text-black text-sm mb-4">{activity.description}</div>
+              </Card>
+            );
+
+            return activity.link ? (
               <a
                 key={index}
                 href={activity.link}
@@ -94,18 +125,12 @@ export function Activities() {
                 target={activity.link.startsWith("#") ? "_self" : "_blank"}
                 rel={activity.link.startsWith("#") ? undefined : "noopener noreferrer"}
               >
-
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow h-full">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className={`${activity.color} w-12 h-12 rounded-lg flex items-center justify-center shrink-0`}>
-                      <Icon />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[#0072ce]">{activity.title}</h3>
-                  </div>
-                  <p className="text-black text-sm mb-4">{activity.description}</p>
-                </Card>
-
+                {cardContent}
               </a>
+            ) : (
+              <div key={index} className="block w-full h-full">
+                {cardContent}
+              </div>
             );
           })}
         </div>
