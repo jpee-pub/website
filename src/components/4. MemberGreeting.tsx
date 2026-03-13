@@ -17,14 +17,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./
 const members = [
   {
     id: 1,
-    name: "Maria",
+    name: "Roua/Maria",
     role: "JPEE+代表 / EdTech系プロダクトマネージャー・コミックアーティスト ",
     description: (
       <>
         神戸出身。東京大学経済学部への入学を機に上京。<br />
-        在学中〜卒業後にかけて父の会社のフィリピンオフィス立ち上げをサポートするべくマニラで現地勤務を行ったり、ニューヨークでのインターンなど、キャリア初期から世界各地で経験を積む。<br />
-        現在はエストニアでフリーランスとして会社<a href="https://www.roua12tnt.com/" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">OÜ Roua</a>を設立し、教育系スタートアップのManabie Internationalでプロダクトマネージャーとしてフルリモートで勤務し、世界各地を旅しながら生活している。<br />
-        また本業の傍ら、フランスのウェブ漫画出版社からのスカウトを受けて<a href="https://www.ono.live/webtoon/devilish-vows" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Devilish Vows</a>の連載を持つなど、コミックアーティストとしても活躍。このグローバルコミュニティJPEE+の立ち上げも行い、様々な挑戦を続けている。
+        在学中〜卒業後にかけて父の会社のフィリピンオフィス立ち上げをサポートするべくマニラに行ったり、卒業後はニューヨークでインターンしたり、エストニアで<a href="https://www.roua12tnt.com/" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">OÜ Roua</a>を立ち上げたりした。<br />
+        現在はクロアチアでデジタルノマドとして主に教育系スタートアップでプロダクトマネージャーとして業務委託で働いている。<br />
+        また本業の傍ら、フランスのウェブ漫画出版社からのスカウトを受けて<a href="https://www.ono.live/webtoon/devilish-vows" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Devilish Vows</a>の連載を持つなど、コミックアーティストとしても活躍。このグローバルコミュニティJPEE+の発起人として、グローバルな引きこもりを掲げながら様々な挑戦を続けている。
       </>
     ),
     location: "クロアチア - ザグレブ",
@@ -32,7 +32,7 @@ const members = [
     links: [
       { label: "X (Twitter)", url: "https://x.com/roua12tnt" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/maria-nawatani-a264337b/" },
-      { label: "ポートフォリオ", url: "https://www.instagram.com/roua12tnt/" },
+      { label: "Instagram", url: "https://www.instagram.com/roua12tnt/" },
     ],
   },
   {
