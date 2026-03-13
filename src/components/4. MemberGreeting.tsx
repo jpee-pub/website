@@ -1,4 +1,4 @@
-import MariaProf from "../assets/o_o_smile.png";
+import MariaProf from "../assets/ykkr_roua.png";
 import YukiProf from "../assets/profile.jpg";
 import HinakoProf from "../assets/hinako.jpg";
 import AkemiProf from "../assets/akemi.png";
@@ -18,12 +18,12 @@ const members = [
   {
     id: 1,
     name: "Roua/Maria",
-    role: "JPEE+代表 / EdTech系プロダクトマネージャー・コミックアーティスト ",
+    role: "JPEE+代表 / EdTech系PdM・コミックアーティスト ",
     description: (
       <>
         神戸出身。東京大学経済学部への入学を機に上京。<br />
-        在学中〜卒業後にかけて父の会社のフィリピンオフィス立ち上げをサポートするべくマニラに行ったり、卒業後はニューヨークでインターンしたり、エストニアで<a href="https://www.roua12tnt.com/" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">OÜ Roua</a>を立ち上げたりした。<br />
-        現在はクロアチアでデジタルノマドとして主に教育系スタートアップでプロダクトマネージャーとして業務委託で働いている。<br />
+        在学中〜卒業後にかけて父の会社のフィリピンオフィス立ち上げをサポートするべくマニラに行ったり、卒業後はニューヨークでインターンしたり、エストニアで<a href="https://www.roua12tnt.com/" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">OÜ Roua</a>を立ち上げたりした。
+        現在はクロアチアでデジタルノマドとして主に教育系スタートアップでプロダクトマネージャーとして働いている。<br />
         また本業の傍ら、フランスのウェブ漫画出版社からのスカウトを受けて<a href="https://www.ono.live/webtoon/devilish-vows" target="_blank" rel="noopener noreferrer" className="text-[#0072ce] underline hover:text-[#005ea2] transition-colors">Devilish Vows</a>の連載を持つなど、コミックアーティストとしても活躍。このグローバルコミュニティJPEE+の発起人として、グローバルな引きこもりを掲げながら様々な挑戦を続けている。
       </>
     ),
