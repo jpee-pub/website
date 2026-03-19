@@ -4,7 +4,7 @@ const Icon = FilePenLine;
 
 export function Career() {
   return (
-    <section id="career" className="p-15 bg-gray-50">
+    <section id="career" className="p-15 bg-white">
       <div className="max-w-7xl mt-5 mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-8 text-black">
@@ -15,8 +15,6 @@ export function Career() {
           </p>
           <ul className="list-disc list-inside">
             <li>SNS運用を通して「海外×発信」に関わりたい方</li>
-            <li>数字を見て改善することにやりがいを感じる方</li>
-            <li>企画と分析の両方を経験したい学生・若手社会人</li>
             <li>ヨーロッパに興味がある方</li>
             <li>海外在住メンバーと協働しながら、海外で働くリアルを体感したい方</li>
             <li>将来的にヨーロッパでの起業・移住・留学を視野に入れている方</li>
@@ -24,7 +22,7 @@ export function Career() {
           <p className="m-3">
             国や言葉を越えて、“好き”でつながる人々の輪を広げたい。
             JPEE+は、そんな想いから生まれたプロジェクトです。
-            あなたの発信力と分析力が、次の交流の架け橋になります。
+            あなたの参加が、次の国際交流の架け橋になります。
           </p>
 
         </div>

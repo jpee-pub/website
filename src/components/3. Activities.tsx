@@ -1,6 +1,10 @@
 import { Card } from "./ui/card";
 import clusterLogo from "../assets/cluster.png";
 import { UserPlus } from "lucide-react";
+import XLogo from "../assets/X_logo.png";
+import InstagramLogo from "../assets/Instagram_Glyph_Gradient.png";
+import ThreadsLogo from "../assets/threads-logo-black-01.png";
+import FacebookLogo from "../assets/facebook.svg";
 
 const DiscordIcon = () => (
   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -106,7 +110,7 @@ export function Activities() {
           {activities.map((activity, index) => {
             const Icon = activity.icon;
             const cardContent = (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow h-full">
+              <Card key={index} className="flex flex-col p-6 hover:shadow-lg transition-shadow h-full">
                 <div className="flex items-center gap-3 mb-2">
                   <div className={`${activity.color} w-12 h-12 rounded-lg flex items-center justify-center shrink-0`}>
                     <Icon />
@@ -114,6 +118,23 @@ export function Activities() {
                   <h3 className="text-lg font-semibold text-[#0072ce]">{activity.title}</h3>
                 </div>
                 <div className="text-black text-sm mb-4">{activity.description}</div>
+                
+                {activity.title === "その他SNS" && (
+                  <div className="mt-auto flex flex-wrap items-center gap-4 pt-4">
+                    <a href="https://x.com/jpee_plus" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                      <img src={XLogo} alt="X" className="w-6 h-6 object-contain" />
+                    </a>
+                    <a href="https://www.instagram.com/jpee.plus/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                      <img src={InstagramLogo} alt="Instagram" className="w-6 h-6 object-contain" />
+                    </a>
+                    <a href="https://www.threads.net/@jpee.plus" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                      <img src={ThreadsLogo} alt="Threads" className="w-6 h-6 object-contain" />
+                    </a>
+                    <a href="https://www.facebook.com/jpee.plus" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                      <img src={FacebookLogo} alt="Facebook" className="w-6 h-6 object-contain" />
+                    </a>
+                  </div>
+                )}
               </Card>
             );
 

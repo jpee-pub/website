@@ -1,5 +1,3 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-
 export function About() {
   return (
     <section id="about" className="py-20 px-10 bg-white">
@@ -8,7 +6,7 @@ export function About() {
           <h2 className="mb-6 text-[#0072ce] text-xl font-bold">私たちの活動</h2>
           <div className="space-y-4 text-black">
             <p>
-              JPEE+は「欧州と日本をつなぐ」をミッションに掲げて活動しています。
+              JPEE+は「ヨーロッパと日本をつなぐ」をミッションに掲げて活動しています。
             </p>
             <p>
               当初はエストニアについて自由なテーマで書いた同人アンソロジー本の編集部として活動を開始。
@@ -18,7 +16,7 @@ export function About() {
               活動してきました。
             </p>
             <p>
-              現在はより広く多様な在り方を目指し、エストニアだけでなく欧州全体への活動拡大や、
+              現在はより広く多様な在り方を目指し、エストニアだけでなくヨーロッパ全体への活動拡大や、
               Discordコミュニティ運営、NoteやラジオといったWeb媒体やVR空間へも進出中。
               国境を越え、オンライン空間でのつながりも重視する活動に移行しています。
             </p>

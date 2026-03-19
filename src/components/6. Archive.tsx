@@ -13,12 +13,11 @@ export function Archive() {
       <div className="max-w-7xl mt-5 mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-[#0072ce] text-xl font-bold">エストニア・アンソロジーの軌跡</h2>
+          <h2 className="mb-4 text-[#0072ce] text-xl font-bold">JPEEエストニア・アンソロジーの軌跡</h2>
           <p className="text-black max-w-2xl mx-auto">
-            5年間にわたり発行してきた、エストニアがテーマの同人アンソロジー本の記録です。<br />
+            JPEEエストニア・アンソロジーは、MariaとYukiが中心になって2019年から2024年までの5年間にわたり発行してきた、エストニアがテーマの同人アンソロジー本です。<br />
             エストニア在住の日本人やエストニア人、旅行者、エストニアに関心を持つ日本人が寄稿し、多様な視点からエストニアを紹介してきました。<br />
-            当時は「色んな人のエストニア体験が聞きたい」という自分たちの興味関心から始まりましたが、
-            つながりを作りたいという気持ちはこの活動を通じて育まれてきました。
+            当時は「色んな人のエストニア体験が聞きたい」という編集者MariaとYukiの興味関心から始まりましたが、つながりを作りたいという気持ちはこの活動を通じて育まれてきました。
           </p>
         </div>
 

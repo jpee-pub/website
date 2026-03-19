@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import tailwindcss from '@tailwindcss/vite'
 
-  export default defineConfig({
+export default defineConfig(({ mode }) => {
+  return {
     plugins: [
       react(),
       tailwindcss()
@@ -58,6 +59,7 @@ import tailwindcss from '@tailwindcss/vite'
     },
     server: {
       port: 3000,
-      open: true,
+      allowedHosts: mode === 'development' ? true : []
     },
-  });
+  };
+});
