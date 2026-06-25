@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { Hero } from "./components/1. Hero";
 import { About } from "./components/2. About";
 import { Activities } from "./components/3. Activities";
@@ -8,6 +9,7 @@ import { Contact } from "./components/7. Contact";
 import { Header } from "./components/0. Header";
 import { Career } from "./components/8. Career";
 import { Footer } from "./components/Footer";
+import { EstoniaPage } from "./estonia";
 
 import './styles/globals.css'
 
@@ -16,14 +18,21 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <Hero />
-        <About />
-        <Activities />
-        <MemberGreeting />
-        <Alliance />
-        <Archive />
-        <Contact />
-        <Career />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <Activities />
+              <MemberGreeting />
+              <Alliance />
+              <Archive />
+              <Contact />
+              <Career />
+            </>
+          } />
+          <Route path="/estonia" element={<EstoniaPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>
