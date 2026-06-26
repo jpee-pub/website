@@ -30,7 +30,7 @@ export function Footer() {
             <div>法人名: OÜ Roua</div>
             <div>登録番号: 14642498</div>
             <div>登記住所: Juhkentali tn 8, Kesklinna linnaosa, 10132 Tallinn, Harju maakond</div>
-            <div><a href="https://www.rik.ee/en/company/14642498" className="text-white underline hover:text-[#003256] transition-colors">エストニアの法人登記局の登録情報はこちら</a></div>
+            <div><a href="https://ariregister.rik.ee/eng/company/14642498/O%C3%9C-Roua" className="text-white underline hover:text-[#003256] transition-colors">エストニアの法人登記局の登録情報はこちら</a></div>
           </div>
         </div>
 

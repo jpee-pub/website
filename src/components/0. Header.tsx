@@ -14,34 +14,37 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0072ce] shadow-lg/30">
       <div className="flex h-18 justify-between items-center">
 
-        <img src={logo} alt="JPEE" className="h-14 ml-3 w-auto" />
+        <img src={logo} alt="JPEE+" className="h-14 ml-3 w-auto" onClick={() => scrollToSection('intro')} />
 
 
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4 mr-5 text-sm whitespace-nowrap">
-          <button onClick={() => scrollToSection('about')} className="hover:text-[#0072ce] transition-colors">
+        <nav className="hidden md:flex items-center gap-4 mr-5 font-semibold whitespace-nowrap text-white">
+          <button onClick={() => scrollToSection('hero')} className="hover:text-[#003399] transition-colors cursor-pointer">
+            最新情報
+          </button>
+          <button onClick={() => scrollToSection('about')} className="hover:text-[#003399] transition-colors cursor-pointer">
             私たちの活動
           </button>
-          <button onClick={() => scrollToSection('activities')} className="hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('activities')} className="hover:text-[#003399] transition-colors cursor-pointer">
             活動内容
           </button>
-          <button onClick={() => scrollToSection('members')} className="hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('members')} className="hover:text-[#003399] transition-colors cursor-pointer">
             メンバー紹介
           </button>
-          <button onClick={() => scrollToSection('alliance')} className="hover:text-[#0072ce] transition-colors">
-            JPEE同盟
+          <button onClick={() => scrollToSection('alliance')} className="hover:text-[#003399] transition-colors cursor-pointer">
+            JPEE+同盟
           </button>
-          <button onClick={() => scrollToSection('archive')} className="hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('archive')} className="hover:text-[#003399] transition-colors cursor-pointer">
             エストニア・アンソロジーの軌跡
           </button>
-          <button onClick={() => scrollToSection('contact')} className="hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('contact')} className="hover:text-[#003399] transition-colors cursor-pointer">
             参加する
           </button>
-          <button onClick={() => scrollToSection('career')} className="hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('career')} className="hover:text-[#003399] transition-colors cursor-pointer">
             メンバー募集
           </button>
         </nav>
