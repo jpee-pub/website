@@ -51,7 +51,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden m-3"
+          className="md:hidden m-3 text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,23 +60,26 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden p-4 flex flex-col gap-4">
-          <button onClick={() => scrollToSection('about')} className="text-left hover:text-[#0072ce] transition-colors">
+        <nav className="md:hidden p-4 flex flex-col gap-4 text-white">
+          <button onClick={() => scrollToSection('hero')} className="text-left">
+            最新情報
+          </button>
+          <button onClick={() => scrollToSection('about')} className="text-left">
             私たちの活動
           </button>
-          <button onClick={() => scrollToSection('activities')} className="text-left hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('activities')} className="text-left">
             活動内容
           </button>
-          <button onClick={() => scrollToSection('career')} className="text-left hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('career')} className="text-left">
             メンバー募集
           </button>
-          <button onClick={() => scrollToSection('alliance')} className="text-left hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('alliance')} className="text-left">
             JPEE+同盟
           </button >
-          <button onClick={() => scrollToSection('archive')} className="text-left hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('archive')} className="text-left">
             エストニア・アンソロジーの軌跡
           </button>
-          <button onClick={() => scrollToSection('contact')} className="text-left hover:text-[#0072ce] transition-colors">
+          <button onClick={() => scrollToSection('contact')} className="text-left">
             参加する
           </button>
         </nav >
