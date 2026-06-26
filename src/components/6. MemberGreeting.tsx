@@ -122,7 +122,7 @@ export function MemberGreeting() {
               {members.map((member) => (
                 <CarouselItem key={member.id} className="basis-[85%] md:basis-full">
                   <div className="px-4">
-                    <Card>
+                    <Card className="border-[#0072ce] border-2 bg-[#0072ce]/5">
                       <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center p-6 gap-6">
                         <div className="flex justify-center items-center">
                           <img
