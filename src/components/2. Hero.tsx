@@ -59,9 +59,10 @@ export function Hero() {
 
         </SwiperSlide>
 
-        <SwiperSlide className="relative h-screen flex items-center justify-center p-10
-          bg-[url({InterviewImg})]
-          bg-cover">
+        <SwiperSlide
+          className="relative h-screen flex items-center justify-center p-10 bg-cover bg-center"
+          style={{ backgroundImage: `url(${InterviewImg})` }}
+        >
 
           <div className="absolute inset-0 bg-[#00315A]/60 backdrop-blur-xs" />
 
