@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import AkemiJpg from '../assets/akemi.jpeg'
+import InterviewImg from '../assets/interview.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../styles/swiper-overrides.css'
@@ -35,7 +37,7 @@ export function Hero() {
             </p>
 
             <img
-              src="src/assets/akemi.jpeg"
+              src={AkemiJpg}
               alt="Akemi-san"
               className="w-30 h-30 m-5 rounded-full object-cover"
             />
@@ -58,7 +60,7 @@ export function Hero() {
         </SwiperSlide>
 
         <SwiperSlide className="relative h-screen flex items-center justify-center p-10
-          bg-[url('src/assets/interview.png')]
+          bg-[url({InterviewImg})]
           bg-cover">
 
           <div className="absolute inset-0 bg-[#00315A]/60 backdrop-blur-xs" />
