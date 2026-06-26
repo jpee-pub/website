@@ -120,7 +120,7 @@ export function MemberGreeting() {
           >
             <CarouselContent>
               {members.map((member) => (
-                <CarouselItem key={member.id} className="md:basis-1/1 lg:basis-1/1">
+                <CarouselItem key={member.id} className="basis-[85%] md:basis-full">
                   <div className="px-8">
                     <Card>
                       <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center p-6 gap-6">
@@ -180,8 +180,8 @@ export function MemberGreeting() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
-            <CarouselNext className="w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
+            <CarouselPrevious className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
+            <CarouselNext className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
           </Carousel>
         </div>
       </div>
