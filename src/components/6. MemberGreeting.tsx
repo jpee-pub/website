@@ -96,7 +96,7 @@ const members = [
     description: (
       <>
         JPEE+の活動を世界に広めるべく誕生した公式マスコットコンビ。<br />
-        電子国家エストニアのネットの海から生まれたウェブ美少女（概念）「じぇーちゃん」と、関西人のおっちゃんが転生した妖精「えぇくん」が、ITとコミュニケーションを武器に「欧州と日本を近くする」ため今日も世界各地を飛び回っている。<br />
+        電子国家エストニアのネット of 海から生まれたウェブ美少女（概念）「じぇーちゃん」と、関西人のおっちゃんが転生した妖精「えぇくん」が、ITとコミュニケーションを武器に「欧州と日本を近くする」ため今日も世界各地を飛び回っている。<br />
       </>
     ),
     location: "ネットの海",
@@ -110,19 +110,23 @@ export function MemberGreeting() {
     <section id="members" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-xl text-[#0072ce] font-bold text-center mb-12">メンバー紹介</h2>
-        <div className="flex justify-center">
+
+        <div className="relative w-full max-w-5xl mx-auto px-12">
           <Carousel
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
-            className="w-full max-w-4xl"
+            className="w-full"
           >
-            <CarouselContent>
+            <CarouselContent className="-ml-4">
               {members.map((member) => (
-                <CarouselItem key={member.id} className="basis-[85%] md:basis-full">
-                  <div className="px-4">
-                    <Card className="border-[#0072ce] border-2 bg-[#0072ce]/5">
+                <CarouselItem
+                  key={member.id}
+                  className="pl-4 basis-[85%] md:basis-[75%]"
+                >
+                  <div className="h-full py-2">
+                    <Card className="border-[#0072ce] border-2 bg-[#0072ce]/5 h-full">
                       <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center p-6 gap-6">
                         <div className="flex justify-center items-center">
                           <img
@@ -131,6 +135,7 @@ export function MemberGreeting() {
                             className="w-32 h-32 md:w-[200px] md:h-[200px] rounded-full object-cover border-4 border-white shadow-md"
                           />
                         </div>
+
                         <div className="text-center md:text-left">
                           <h3 className="text-xl text-[#0072ce] font-bold mb-1">{member.name}</h3>
                           <p className="text-sm my-2">{member.role}</p>
@@ -172,7 +177,6 @@ export function MemberGreeting() {
                               </AccordionItem>
                             </Accordion>
                           )}
-
                         </div>
                       </CardContent>
                     </Card>
@@ -180,8 +184,9 @@ export function MemberGreeting() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
-            <CarouselNext className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-0 bg-transparent hover:bg-gray-200 hover:text-[#0072ce]" />
+
+            <CarouselPrevious className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-2 border-[#0072ce] bg-white hover:bg-gray-100 hover:text-[#0072ce] -left-6" />
+            <CarouselNext className="hidden md:inline-flex w-12 h-12 text-[#0072ce] border-2 border-[#0072ce] bg-white hover:bg-gray-100 hover:text-[#0072ce] -right-6" />
           </Carousel>
         </div>
       </div>

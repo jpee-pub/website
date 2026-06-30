@@ -1,119 +1,100 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
-import AkemiJpg from '../assets/akemi.jpeg'
-import InterviewImg from '../assets/interview.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
-import '../styles/swiper-overrides.css'
+import '../styles/swiper-overrides.css';
+
+import Carousel1 from '../assets/カルーセル-1.gif';
+import Carousel2 from '../assets/カルーセル-2.gif';
+import Carousel3 from '../assets/カルーセル-3.gif';
 
 export function Hero() {
+
+  const scrollToSection = (id: string): void => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
+
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center overflow-hidden bg-gray-50">
+    <section id="hero" className="relative flex flex-col items-center justify-center overflow-hidden bg-gray-50 py-10 w-full">
+      <h2 className="mb-6 text-[#0072ce] text-2xl font-bold">最新情報</h2>
 
-      <h2 className="mt-10 mb-5 text-[#0072ce] text-2xl font-bold">最新情報</h2>
+      <div className="w-full max-w-6xl px-4 mx-auto">
+        <Swiper
+          pagination={pagination}
+          modules={[Pagination, Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: true }}
+          centeredSlides={true}
+          slidesPerView={1.2}
+          spaceBetween={16}
 
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 5000, disableOnInteraction: true }}
-        pagination={{ clickable: true }}
-        navigation
-        className="h-[75vh] w-full"
-      >
-
-        <SwiperSlide className="relative h-screen flex flex-col justify-center
-          bg-[url('https://plus.unsplash.com/premium_photo-1778963525813-e089285c8518?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
-          bg-cover
-          bg-[position:50%_50%]">
-
-          <div className="absolute inset-0 bg-black/50" />
-
-          <div className="relative z-10 flex flex-col items-center justify-center px-2 text-center text-white p-10 max-w-4xl mx-auto my-auto">
-
-            <p className="text-2xl font-bold text-[#ffcc00]">
-              エストニア留学・移住直前Q&A近日公開！
-            </p>
-
-            <img
-              src={AkemiJpg}
-              alt="Akemi-san"
-              className="w-30 h-30 m-5 rounded-full object-cover"
-            />
-
-            <p className="max-w-2xl mx-auto mb-8">
-              JPEE+のエストニア在住メンバーでインタビューにも参加しているAkemiさんが答える、留学・移住直前Q&AがNoteにて7月公開予定です！<br />
-              実際にエストニアへの渡航を控える方からのリアルな疑問に、現地在住者が真剣にアンサーします。<br />
-              Noteのフォローをお忘れなく！
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://note.com/jpee_plus"
-                className="bg-[#0072ce] text-white px-8 py-3 rounded-md hover:bg-[#005bb5] transition-colors">
-                Noteのフォローはこちら！
-              </a>
-            </div>
-
-          </div>
-
-        </SwiperSlide>
-
-        <SwiperSlide
-          className="relative h-screen flex items-center justify-center p-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${InterviewImg})` }}
+          style={{
+            // @ts-ignore
+            "--swiper-pagination-color": "#0072ce",
+            "--swiper-pagination-bullet-inactive-color": "#9ca3af",
+            "--swiper-pagination-bullet-inactive-opacity": "0.4",
+            "--swiper-pagination-bullet-size": "10px",
+          }}
+          className="w-full"
         >
 
-          <div className="absolute inset-0 bg-[#00315A]/60 backdrop-blur-xs" />
+          {/* 1枚目: Note */}
+          <SwiperSlide className="pb-12">
+            <a
+              href="https://note.com/jpee_plus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-gray-200"
+            >
+              <img
+                src={Carousel1}
+                alt="留学・移住直前Q&A7月公開！Noteをフォロー!"
+                className="w-full h-full object-cover"
+              />
+            </a>
+          </SwiperSlide>
 
-          <div className="relative z-10 text-center">
+          {/* 2枚目: YouTube（インタビュー） */}
+          <SwiperSlide className="pb-12">
+            <a
+              href="https://youtu.be/UorWvpd0z-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <img
+                src={Carousel2}
+                alt="在外邦人インタビュー第一弾公開中"
+                className="w-full h-full object-cover transition-transform group-hover:scale-[1.02] duration-300"
+              />
+            </a>
+          </SwiperSlide>
 
-            <h2 className="mb-5 text-2xl font-extrabold text-[#ffcc00]">エストニア在住日本人インタビュー第1弾公開中</h2>
+          {/* 3枚目: ポッドキャスト */}
+          <SwiperSlide className="pb-12">
+            <button
+              onClick={() => scrollToSection('activities')}
+              className="relative block w-full aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group text-left cursor-pointer"
+            >
+              <img
+                src={Carousel3}
+                alt="Spotify・YouTubeでポッドキャスト配信中"
+                className="w-full h-full object-cover"
+              />
+            </button>
+          </SwiperSlide>
 
-            <p className="x-full mx-auto mb-8 text-white ">JPEE+メンバーで元看護師のAkemiさんが、エストニアの大学へ社会人留学しキャリアチェンジを果たしたリアルな体験談！<br />
-              海外留学・移住を考えている方、社会人からのキャリアチェンジに興味がある方は必見の内容です！</p>
-
-            <iframe
-              className="aspect-video h-full max-w-4xl max-h-60 mx-auto"
-              src="https://www.youtube.com/embed/UorWvpd0z-4?si=3qng-MBjrYTDgIEY"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-        </SwiperSlide>
-
-        <SwiperSlide className="relative h-screen flex flex-col justify-center
-          bg-[url('https://images.unsplash.com/photo-1668609045837-5e2de3b006c6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
-          bg-cover
-          bg-position-[50%_40%]">
-
-          <div className="absolute inset-0 bg-black/40" />
-
-          <div className="relative z-10 flex flex-col items-center justify-center px-2 text-center text-white p-10 max-w-4xl mx-auto my-auto">
-
-            <h2 className="mb-5 text-2xl font-extrabold text-[#ffcc00]">
-              Spotify・YouTubeで活動について語るポッドキャスト配信中!
-            </h2>
-
-            <iframe
-              className="w-full h-[100px]"
-              src="https://open.spotify.com/embed/episode/4m8TbpEth98U6ZEAjVO5dA?utm_source=generator"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              title="Spotify Embed"
-            ></iframe>
-
-            <iframe
-              className="aspect-video h-full max-w-4xl max-h-60 mx-auto"
-              src="https://www.youtube.com/embed/videoseries?si=3Wwiz6A9CG6btlZb&amp;list=PLnlzGn2uutPcNXGTrZGZtRrX2XytL7Qwv" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          </div>
-
-        </SwiperSlide>
-
-      </Swiper>
+        </Swiper>
+      </div>
     </section>
   );
 }
