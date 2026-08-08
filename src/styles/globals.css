@@ -81,6 +81,9 @@
 }
 
 @theme inline {
+  --font-mplus: 'M PLUS 1p', sans-serif;
+  --font-mplus-rounded: 'M PLUS Rounded 1c', sans-serif;
+  --font-sekuya: 'Sekuya', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -189,4 +192,67 @@
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  /* セクション見出し */
+  .section-title {
+    @apply text-2xl font-bold mb-2 mt-10 text-[#0072ce] border-b-4 border-[#0072ce];
+  }
+
+  /* QAカード枠組み */
+  .qa-card {
+    @apply space-y-4 p-2 mb-2;
+  }
+
+  /* スクロール追従の質問ヘッダー */
+  .qa-header {
+    @apply sticky top-20 z-10 bg-white/60 backdrop-blur p-4 rounded-xl text-xl font-bold text-[#0072ce] flex items-start gap-3 transition-all;
+  }
+
+  /* 質問番号 (Q1, Q2...) */
+  .qa-number {
+    @apply font-sekuya text-6xl font-black leading-none shrink-0;
+  }
+
+  /* 質問文 */
+  .qa-title-text {
+    @apply leading-snug text-2xl pt-1;
+  }
+
+  /* 質問者のコメントボックス (Rai) */
+  .rai-question {
+    @apply bg-slate-100 p-4 rounded-xl;
+  }
+
+  /* 回答者の本文エリア (Akemi) */
+  .akemi-answer {
+    @apply p-4 space-y-3;
+  }
+
+  /* 他の在外日本人の意見ボックス */
+  .other-opinions {
+    @apply bg-amber-50 p-4 rounded-xl space-y-2 text-sm border border-amber-200;
+  }
+
+  .other-opinions-title {
+    @apply font-bold text-amber-900;
+  }
+
+  /* チェックリスト・参考資料ボックス */
+  .checklist-box {
+    @apply bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-2;
+  }
+
+  .checklist-title {
+    @apply font-bold text-gray-800;
+  }
+
+  .checklist-warning {
+    @apply text-base text-red-500;
+  }
+
+  .checklist-list {
+    @apply list-disc list-inside ml-4 text-sm space-y-1;
+  }
 }

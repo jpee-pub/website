@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/jpee+_logo.png";
 
 export function Footer() {
@@ -14,14 +15,10 @@ export function Footer() {
           </div>
 
           <div>
-            <ul className="text-sm text-white py-6 space-y-2">
-              <li><a href="#about" className="text-white hover:text-[#003256] transition-colors">私たちの活動</a></li>
-              <li><a href="#activities" className="text-white hover:text-[#003256] transition-colors">活動内容</a></li>
-              <li><a href="#alliance" className="text-white hover:text-[#003256] transition-colors">JPEE+同盟</a></li>
-              <li><a href="#archive" className="text-white hover:text-[#003256] transition-colors">エストニア・アンソロジーの軌跡</a></li>
-              <li><a href="#members" className="text-white hover:text-[#003256] transition-colors">メンバー紹介</a></li>
-              <li><a href="#contact" className="text-white hover:text-[#003256] transition-colors">デザインパートナー(参加する)</a></li>
-              <li><a href="#career" className="text-white hover:text-[#003256] transition-colors">メンバー募集</a></li>
+            <ul className="text-sm text-white py-6 space-y-2 font-semibold">
+              <li><Link to="/" className="text-white hover:text-[#003256] transition-colors">JPEE+について</Link></li>
+              <li><Link to="/eesti-portal" className="text-white hover:text-[#003256] transition-colors">エストニア情報</Link></li>
+              <li><Link to="/jpee-plus-lab" className="text-white hover:text-[#003256] transition-colors">JPEE+Lab</Link></li>
             </ul>
           </div>
 

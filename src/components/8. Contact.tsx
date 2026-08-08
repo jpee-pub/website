@@ -8,13 +8,15 @@ const contactMethods = [
     description: "Discordへの参加やSNSのフォローで、最新の活動情報をチェックできます。",
     action: "活動を見る",
     link: "#activities",
+    isExternal: false,
   },
   {
     icon: Mail,
     title: "お問い合わせ",
     description: "コラボレーションや業務提携、活動内容に関する相談はこちらからどうぞ。",
     action: "問い合わせる",
-    link: "mailto:contact@jpee-plus.com"
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSe4SzZW0w_pslbPzqFWr1t3RL4i_D5M1u5nHg_4Zg53jfxqFw/viewform?usp=header",
+    isExternal: true, // 別タブで開くフラグ
   },
   {
     icon: Briefcase,
@@ -22,6 +24,7 @@ const contactMethods = [
     description: "活動内容に共感し、世界のどこからでも一緒に働いてくれる方を募集しています。",
     action: "問い合わせる",
     link: "#careers",
+    isExternal: false,
   }
 ];
 
@@ -42,11 +45,13 @@ export function Contact() {
             const Icon = method.icon;
             return (
               <a
+                key={index}
                 href={method.link}
+                target={method.isExternal ? "_blank" : undefined}
+                rel={method.isExternal ? "noopener noreferrer" : undefined}
                 className="block h-full"
               >
                 <Card
-                  key={index}
                   className="p-6 hover:bg-[#0072ce] hover:text-white flex flex-col items-center text-center transition-colors"
                 >
                   <div className="rounded-lg flex items-center justify-center">

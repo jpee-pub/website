@@ -1,19 +1,20 @@
+import { useState, useEffect } from "react";
 import MariaProf from "../assets/ykkr_roua.png";
 import YukiProf from "../assets/profile.jpg";
 import HinakoProf from "../assets/hinako.jpg";
 import AkemiProf from "../assets/akemi.png";
 import JchanEkun from "../assets/じぇーちゃんえぇくん.png";
-import { MapPin } from "lucide-react"
-import { Card, CardContent } from "./ui/card"
+import { MapPin } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion"
-
+  type CarouselApi,
+} from "./ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 const members = [
   {
     id: 1,
@@ -106,6 +107,14 @@ const members = [
 ]
 
 export function MemberGreeting() {
+  const [api, setApi] = useState<CarouselApi>();
+
+  // カードがクリックされた時にそのスライドへ移動させる関数
+  const handleCardClick = (index: number) => {
+    if (!api) return;
+    api.scrollTo(index);
+  };
+
   return (
     <section id="members" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -113,6 +122,7 @@ export function MemberGreeting() {
 
         <div className="relative w-full max-w-5xl mx-auto px-12">
           <Carousel
+            setApi={setApi} // API インスタンスを取得
             opts={{
               align: "center",
               loop: true,
@@ -120,13 +130,16 @@ export function MemberGreeting() {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {members.map((member) => (
+              {members.map((member, index) => (
                 <CarouselItem
                   key={member.id}
                   className="pl-4 basis-[85%] md:basis-[75%]"
                 >
                   <div className="h-full py-2">
-                    <Card className="border-[#0072ce] border-2 bg-[#0072ce]/5 h-full">
+                    <Card
+                      onClick={() => handleCardClick(index)} // クリックイベントを追加
+                      className="border-[#0072ce] border-2 bg-[#0072ce]/5 h-full cursor-pointer select-none" // cursor-pointerを追加
+                    >
                       <CardContent className="grid grid-cols-1 md:grid-cols-2 items-center p-6 gap-6">
                         <div className="flex justify-center items-center">
                           <img
@@ -149,12 +162,14 @@ export function MemberGreeting() {
 
                           {member.links && member.links.length > 0 && (
                             <div className="flex flex-wrap gap-4 my-2 justify-center md:justify-start">
-                              {member.links.map((link, index) => (
+                              {member.links.map((link, linkIndex) => (
                                 <a
-                                  key={index}
+                                  key={linkIndex}
                                   href={link.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
+                                  // リンククリック時にカード全体のバブリング（スライド移動）を防止
+                                  onClick={(e) => e.stopPropagation()}
                                   className="text-[#0072ce] hover:underline text-sm font-medium whitespace-nowrap"
                                 >
                                   {link.label}
@@ -164,18 +179,21 @@ export function MemberGreeting() {
                           )}
 
                           {member.description && (
-                            <Accordion type="single" collapsible className="w-full my-2">
-                              <AccordionItem value="item-1" className="border-b-0">
-                                <AccordionTrigger className="py-0 [&>svg]:translate-y-[-0.5px] [&>svg]:translate-x-[-10px] text-sm text-[#0072ce] items-center translate-x-3 justify-center hover:underline md:justify-start">
-                                  自己紹介・略歴
-                                </AccordionTrigger>
-                                <AccordionContent>
-                                  <div className="py-1 text-sm text-gray-600 leading-relaxed whitespace-pre-wrap text-left">
-                                    {member.description}
-                                  </div>
-                                </AccordionContent>
-                              </AccordionItem>
-                            </Accordion>
+                            // アコーディオン開閉時にもカード全体のスライド移動が暴発しないよう e.stopPropagation() を付与
+                            <div onClick={(e) => e.stopPropagation()}>
+                              <Accordion type="single" collapsible className="w-full my-2">
+                                <AccordionItem value="item-1" className="border-b-0">
+                                  <AccordionTrigger className="py-0 [&>svg]:translate-y-[-0.5px] [&>svg]:translate-x-[-10px] text-sm text-[#0072ce] items-center translate-x-3 justify-center hover:underline md:justify-start">
+                                    自己紹介・略歴
+                                  </AccordionTrigger>
+                                  <AccordionContent>
+                                    <div className="py-1 text-sm text-gray-600 leading-relaxed whitespace-pre-wrap text-left">
+                                      {member.description}
+                                    </div>
+                                  </AccordionContent>
+                                </AccordionItem>
+                              </Accordion>
+                            </div>
                           )}
                         </div>
                       </CardContent>
@@ -191,5 +209,5 @@ export function MemberGreeting() {
         </div>
       </div>
     </section>
-  )
+  );
 }

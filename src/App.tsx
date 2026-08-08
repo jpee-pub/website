@@ -1,33 +1,26 @@
-import { Hero } from "./components/2. Hero";
-import { About } from "./components/3. About";
-import { Activities } from "./components/4. Activities";
-import { Alliance } from "./components/5. Alliance";
-import { Archive } from "./components/7. Archive";
-import { MemberGreeting } from "./components/6. MemberGreeting";
-import { Contact } from "./components/8. Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import JpeePlusLab from "./pages/JpeePlusLab";
+import EestiPortal from "./pages/eesti-portal/EestiPortal";
+import QA from "./pages/eesti-portal/qa";
 import { Header } from "./components/0. Header";
-import { Career } from "./components/9. Career";
 import { Footer } from "./components/Footer";
-import { Intro } from "./components/1. Intro";
 
-import './styles/globals.css'
+import "./styles/globals.css";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Intro />
-        <Hero />
-        <About />
-        <Activities />
-        <MemberGreeting />
-        <Alliance />
-        <Archive />
-        <Contact />
-        <Career />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/jpee-plus-lab" element={<JpeePlusLab />} />
+          <Route path="/eesti-portal" element={<EestiPortal />} />
+          <Route path="/eesti-portal/qa" element={<QA />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
