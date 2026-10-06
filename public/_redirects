@@ -1,1 +1,5 @@
+# _redirects は netlify.toml より先に評価され、先に一致したルールが使われる。
+# API プロキシを SPA フォールバックより上に置かないと、/api/* が index.html になる。
+/api/note-rss  https://note.com/jpee_plus/rss  200!
+/api/youtube-rss  https://www.youtube.com/feeds/videos.xml?playlist_id=PLnlzGn2uutPeObUOWMtdg5mgqwn0JxiBV  200!
 /*  /index.html  200

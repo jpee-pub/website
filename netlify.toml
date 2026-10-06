@@ -9,3 +9,9 @@
   to = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLnlzGn2uutPeObUOWMtdg5mgqwn0JxiBV"
   status = 200
   force = true
+
+# SPA fallback. Must stay after the API proxies above.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
