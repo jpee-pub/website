@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import akemiQaImg from "../../assets/akemi_qa.png";
+import qaInJapanImg from "../../assets/qa_japan.png";
+import qaInOverseasImg from "../../assets/qa_overseas.png";
 import estonianClubImg from "../../assets/estonian_study_club.jpg";
 import museumCalImg from "../../assets/museum_calendar.png";
 import { EestiMendanCTA } from "../../components/EestiMendanCTA";
@@ -15,11 +16,10 @@ interface PortalCardItem {
 
 const PORTAL_CARDS: PortalCardItem[] = [
   {
-    to: "/eesti-portal/qa",
+    to: "/eesti-portal/qa-in-japan",
     title: "留学・移住直前Q&A",
-    image: akemiQaImg,
+    image: qaInJapanImg,
     imageAlt: "Akemi Q&A",
-    updatedAt: "2026/08/06",
     description: (
       <>
         <p>
@@ -32,11 +32,26 @@ const PORTAL_CARDS: PortalCardItem[] = [
     ),
   },
   {
+    to: "/eesti-portal/qa-in-overseas",
+    title: "留学・移住の現地到着後Q&A",
+    image: qaInOverseasImg,
+    imageAlt: "Akemi Q&A 現地到着後",
+    description: (
+      <>
+        <p>
+          「現地に到着したけど、何か見落としていそうで不安！」「着いたら早めにしておいたほうがいいことは？」という方におすすめです。2023年からエストニア在住のJPEE+メンバーAkemiがばっちり答えます！
+        </p>
+        <p>
+          到着後の手続きから大学生活、コミュニティ、卒業後のキャリアまで、エストニアでの生活スタートに役立つ情報をまとめました👀
+        </p>
+      </>
+    ),
+  },
+  {
     to: "https://www.instagram.com/estonian_studyclub/",
     title: "Estonian Self Study Club",
     image: estonianClubImg,
     imageAlt: "Estonian Self Study Club",
-    updatedAt: "2026/09/20",
     description: (
       <>
         <p>
@@ -58,7 +73,6 @@ const PORTAL_CARDS: PortalCardItem[] = [
     title: "タリン市内ミュージアムカレンダー",
     image: museumCalImg,
     imageAlt: "タリン市内ミュージアムカレンダー",
-    updatedAt: "2026/08/06",
     description: (
       <>
         <p>
@@ -121,12 +135,6 @@ export default function EestiPortal() {
                 </div>
               </div>
 
-              {/* 最終更新日 */}
-              {card.updatedAt && (
-                <div className="text-right text-xs md:text-sm font-bold text-[#0072ce]">
-                  最終更新日 : {card.updatedAt}
-                </div>
-              )}
             </div>
           </div>
         ))}

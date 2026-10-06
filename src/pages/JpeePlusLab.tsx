@@ -43,9 +43,6 @@ export default function JpeePlusLab() {
           </div>
 
           <div className="text-right mt-6">
-            <span className="text-sm font-semibold text-[#0072ce]">
-              最終更新日 : 2026/09/20
-            </span>
           </div>
         </div>
       </a>
