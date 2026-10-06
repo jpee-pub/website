@@ -75,7 +75,7 @@ export function Archive() {
             </a>
 
             <a
-              href="https://www.amazon.co.jp/s?i=digital-text&rh=p_27%3AJPEE%25E7%25B7%25A8%25E9%259B%2586%25E9%2583%25A8&s=relevancerank&language=en&text=JPEE%E7%B7%A8%E9%9B%86%E9%83%A8&ref=dp_byline_sr_ebooks_1"
+              href="https://www.amazon.co.jp/stores/JPEE-%E7%B7%A8%E9%9B%86%E9%83%A8/author/B0HJ82PVBP?ref=ap_rdr&shoppingPortalEnabled=true"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 bg-[#FF9900] text-white rounded-md hover:bg-[#e67e22] transition-colors"

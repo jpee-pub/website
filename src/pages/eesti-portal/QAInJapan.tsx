@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TableOfContents } from '../../components/TableOfContents';
 import EestiMendanCTA from '../../components/EestiMendanCTA';
 
-export default function QA() {
-  const contentRef = React.useRef<HTMLElement | null>(null);
+export default function QAInJapan() {
+  const contentRef = React.useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="pt-28 pb-16 px-4 max-w-5xl mx-auto min-h-[80vh] flex flex-col">
-      <div className="mb-12">
+    <div className="pt-28 pb-16 px-4 max-w-5xl mx-auto min-h-[80vh] flex flex-col min-w-0 w-full">
+      <div className="mb-12 min-w-0 w-full">
         <h1 className="text-4xl font-black tracking-wide text-[#0072ce] mb-3">留学・移住直前Q&A</h1>
         <section className="intro-section space-y-4 text-gray-700 leading-relaxed p-6">
           <p>
@@ -27,13 +28,18 @@ export default function QA() {
           <p>
             皆さんが海外生活をスムーズにスタートするための一助に、少しでもなれたら嬉しいです！
           </p>
+          <p>
+            またこちらのページは「移住前の準備」に重点を置いた内容となっていますので、移住後の現地での準備などについて読みたい方はこちらの「
+            <Link to="/eesti-portal/qa-in-overseas" className="text-[#0072ce] underline font-semibold">留学・移住の現地到着後Q&A</Link>
+            」をご覧ください！
+          </p>
         </section>
 
         {/* 目次 */}
         <TableOfContents contentRef={contentRef} />
 
         {/* セクション 1 */}
-        <div ref={contentRef}>
+        <div ref={contentRef} className="min-w-0 w-full">
           <section className="space-y-8">
             <h2 className="section-title">
               渡航までのスケジュールと手続き
@@ -295,7 +301,11 @@ export default function QA() {
                 <p>私は大学のオリエンテーションの約１週間前に入国しました。日本にいるうちに既に現地の住む場所を決めて来たので、１週間あればある程度生活に必要なお店の場所や買い物などをするのに十分でした。</p>
                 <p>もし現地に来てから住む場所を決める場合はもう少し前から来て、内見にしっかり時間が使えるようにしても良いのかなと思います。</p>
                 <p>しかし逆に早く入国し過ぎても、友達がまだいない・大学も始まっていない状態だとあまりやることがないのではないかなと思います。でも早く入国して、授業が始まる前に留学先の国内や周辺の国をゆっくり観光するというのはありかもしれません。</p>
-                <p>エストニアでの留学生活については、今後別の記事でまた詳しくお話しする予定です。お楽しみに！また、JPEE+のサイトも要チェック！</p>
+                <p>
+                  エストニアでの留学生活については、「
+                  <Link to="/eesti-portal/qa-in-overseas" className="text-[#0072ce] underline font-semibold">留学・移住の現地到着後Q&A</Link>
+                  」で詳しくお話ししています。また、JPEE+のサイトも要チェック！
+                </p>
               </div>
             </div>
           </section>
@@ -477,11 +487,18 @@ export default function QA() {
           <section className="space-y-8">
             <h2 className="section-title">おわりに</h2>
             <p>いかがでしたか？</p>
-            <p>今回は、日本にいるうちにやっておいた方が良いことにフォーカスした内容でお届けしました。海外渡航直後の疑問を集めた記事も、後日公開予定です。</p>
+            <p>
+              今回は、日本にいるうちにやっておいた方が良いことにフォーカスした内容でお届けしました。現地到着後の疑問を集めた「
+              <Link to="/eesti-portal/qa-in-overseas" className="text-[#0072ce] underline font-semibold">留学・移住の現地到着後Q&A</Link>
+              」もあわせてご覧ください。
+            </p>
             <p>海外渡航に向けての準備はわからないことが多く、不安やストレスでいっぱいになることもあるかもしれませんが、新しい国・環境での生活がすてきなものになりますように。応援しています！</p>
             <p>もしこれから海外での新生活を控えている方や、海外生活経験者の方で、「もっとこんなことが聞いてみたい！」「自分のときにこんな情報があったら良かった！」ということがありましたら、ぜひコメントで教えてください。</p>
             <p>また、こちらのインタビュー動画では、エストニア在住のAkemiが社会人留学への準備についてや現地での学生生活について語っています。ぜひ合わせてご覧ください〜！</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UorWvpd0z-4?si=WKuVH9NPEAPO2FOv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div className="space-y-6">
+              <iframe className="block w-full max-w-full aspect-video" src="https://www.youtube.com/embed/UorWvpd0z-4" title="社会人留学への準備と現地での学生生活" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <iframe className="block w-full max-w-full aspect-video" src="https://www.youtube.com/embed/dkUDumpj-_g" title="エストニア現地での生活" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            </div>
           </section>
         </div>
 

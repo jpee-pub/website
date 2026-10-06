@@ -28,14 +28,14 @@ export function Career() {
         </div>
 
         <a
-          href="https://forms.gle/RKR8imzVCH3HogSXA"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe4SzZW0w_pslbPzqFWr1t3RL4i_D5M1u5nHg_4Zg53jfxqFw/viewform?usp=header"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full inline-block text-white bg-[#0072ce] p-5 rounded-md hover:bg-[#005ea2] transition-colors text-3xl font-bold"
         >
           <div className="text-center">
             <Icon className="text-white inline-block mx-4 translate-y-[-2px] shrink-0" size={28} />
-            クリックしてJPEE+の活動に参加
+            JPEE+に連絡してみる！
             <Icon className="text-white inline-block mx-4 translate-y-[-2px] shrink-0" size={28} />
           </div>
         </a>

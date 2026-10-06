@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import MariaProf from "../assets/ykkr_roua.png";
 import YukiProf from "../assets/profile.jpg";
-import HinakoProf from "../assets/hinako.jpg";
+import HinakoProf from "../assets/prof_hinako2.png";
 import AkemiProf from "../assets/akemi.png";
+import QuinoProf from "../assets/profile_rin.png";
 import JchanEkun from "../assets/じぇーちゃんえぇくん.png";
 import { MapPin } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
@@ -56,26 +57,8 @@ const members = [
   },
   {
     id: 3,
-    name: "Hinako",
-    role: "JPEE+ファミリー / 人事・法人営業・キャリアコンサルタント",
-    description: (
-      <>
-        沖縄出身。早稲田大学人間科学部卒業後、パソナのベンチャー企業ベネフィット・ワンで法人営業としてキャリアをスタートする。その後リクルートに転職し着実に日本での実績を重ねてきたが、ずっと憧れだった海外生活の夢を実現するため退職を決意。カナダへの語学留学やMavensWood Investmentsでのインターンで実力を積み、現在はオランダに移住。<br />
-        日本で培った営業や人事部での経験を活かし、今度はグローバルな環境で多様な「人と人とを繋ぐ」仕事を続けている。<br />
-        JPEE+プロジェクトの立ち上げ時期に、ポッドキャスト『JPEE Radio』の企画とパーソナリティを担当。欧州生活のリアルを日本の視聴者へ届ける役割を担った。
-      </>
-    ),
-    location: "オランダ - ハーグ",
-    image: HinakoProf,
-    links: [
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/hinakotamaki81/" },
-      { label: "Note", url: "https://note.com/thina_81" },
-    ],
-  },
-  {
-    id: 4,
     name: "Akemi",
-    role: "JPEE+ファミリー / 看護師・ゲームデザイナー",
+    role: "JPEE+メンバー / 看護師・ゲームデザイナー",
     description: (
       <>
         山口県出身。東京大学医学部健康総合科学科在学中から医療福祉の専門職としてキャリアをスタートし、卒業後は国立がん研究センター東病院にて看護師として最先端のがん医療の現場に従事。<br />
@@ -91,6 +74,25 @@ const members = [
     ],
   },
   {
+    id: 4,
+    name: "Quino/Rin",
+    role: "JPEE+メンバー / フルスタックWebエンジニア",
+    description: (
+      <>
+        東京出身。フルスタックWebエンジニアとしてのキャリアを続けており、これまでフロントエンド、バックエンドからインフラまで幅広く経験。自社開発では、請求書の作成や案件・顧客管理などを一元化する業務システムの開発にも携わった。<br />
+        コロナ禍で世界的にビザの発給が停止した際、いち早くワーキングホリデービザの発給を再開したエストニアへ渡航。移住先を探すため一度ドイツへ渡り、そこからヨーロッパ各国を巡った末にタリンを気に入り、現在もエストニアを拠点としている。もともとエストニアで民泊事業をやりたいと考えていたことから民泊会社で働くようになり、これまでのエンジニア経験を買われて業務の自動化やシステム開発を担当。その後、業務委託という形で、現場へのヒアリングからSaaSやGASなどを用いたシステムの設計・実装まで、企業のDX推進を支援している。<br />
+        また、同人活動の経験もあり、技術だけにとどまらず、コミュニティや創作活動にも関心を持つ。今後はエストニアで事業を行い、現地に貢献しながら、日本のコミケのような同人イベントをエストニアで開催することを目指している。<br />
+        感覚を頼りに動き、気になったことにはまず飛び込んでみるタイプ。犬が好き。
+      </>
+    ),
+    location: "エストニア - タリン",
+    image: QuinoProf,
+    links: [
+      { label: "LinkedIn", url: "www.linkedin.com/in/quino28" },
+      { label: "Github", url: "https://github.com/quino28" },
+    ],
+  },
+  {
     id: 5,
     name: "じぇーちゃん & えーくん",
     role: "JPEE+ 公式アンバサダー",
@@ -103,6 +105,24 @@ const members = [
     location: "ネットの海",
     image: JchanEkun,
     links: [],
+  },
+  {
+    id: 6,
+    name: "Hinako",
+    role: "JPEE+ファミリー / 人事・法人営業・キャリアコンサルタント",
+    description: (
+      <>
+        沖縄出身。早稲田大学人間科学部卒業後、パソナのベンチャー企業ベネフィット・ワンで法人営業としてキャリアをスタートする。その後リクルートに転職し着実に日本での実績を重ねてきたが、ずっと憧れだった海外生活の夢を実現するため退職を決意。カナダへの語学留学やMavensWood Investmentsでのインターンで実力を積み、現在はオランダに移住。<br />
+        日本で培った営業や人事部での経験を活かし、今度はグローバルな環境で多様な「人と人とを繋ぐ」仕事を続けている。<br />
+        JPEE+プロジェクトの立ち上げ時期に、ポッドキャスト『JPEE Radio』の企画とパーソナリティを担当。欧州生活のリアルを日本の視聴者へ届ける役割を担った。
+      </>
+    ),
+    location: "オランダ - ハーグ",
+    image: HinakoProf,
+    links: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/hinakotamaki81/" },
+      { label: "Note", url: "https://note.com/thina_81" },
+    ],
   },
 ]
 

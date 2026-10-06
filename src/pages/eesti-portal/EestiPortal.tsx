@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import akemiQaImg from "../../assets/akemi_qa.png";
+import qaInJapanImg from "../../assets/qa_japan.png";
+import qaInOverseasImg from "../../assets/qa_overseas.png";
+import estonianClubImg from "../../assets/estonian_study_club.jpg";
 import museumCalImg from "../../assets/museum_calendar.png";
-import estMendanCTA from "../../assets/est_mendan_button.png";
 import { EestiMendanCTA } from "../../components/EestiMendanCTA";
 
 interface PortalCardItem {
@@ -15,11 +16,10 @@ interface PortalCardItem {
 
 const PORTAL_CARDS: PortalCardItem[] = [
   {
-    to: "/eesti-portal/qa",
+    to: "/eesti-portal/qa-in-japan",
     title: "留学・移住直前Q&A",
-    image: akemiQaImg,
+    image: qaInJapanImg,
     imageAlt: "Akemi Q&A",
-    updatedAt: "2026/08/06",
     description: (
       <>
         <p>
@@ -32,11 +32,47 @@ const PORTAL_CARDS: PortalCardItem[] = [
     ),
   },
   {
+    to: "/eesti-portal/qa-in-overseas",
+    title: "留学・移住の現地到着後Q&A",
+    image: qaInOverseasImg,
+    imageAlt: "Akemi Q&A 現地到着後",
+    description: (
+      <>
+        <p>
+          「現地に到着したけど、何か見落としていそうで不安！」「着いたら早めにしておいたほうがいいことは？」という方におすすめです。2023年からエストニア在住のJPEE+メンバーAkemiがばっちり答えます！
+        </p>
+        <p>
+          到着後の手続きから大学生活、コミュニティ、卒業後のキャリアまで、エストニアでの生活スタートに役立つ情報をまとめました👀
+        </p>
+      </>
+    ),
+  },
+  {
+    to: "https://www.instagram.com/estonian_studyclub/",
+    title: "Estonian Self Study Club",
+    image: estonianClubImg,
+    imageAlt: "Estonian Self Study Club",
+    description: (
+      <>
+        <p>
+          Akemiさんが主催の、タリンでエストニア語を学習中の方向けの勉強会です。タリン市内のカフェで不定期開催中。参加の際のエストニア語レベルは不問です。
+        </p>
+        <p>
+          「エストニア語の練習相手がいない…」<br />
+          「勉強を続けるモチベーションを保つのが難しい」<br />
+          そんな悩みをお持ちの方は、ぜひ一度覗いてみてくださいね。
+        </p>
+        <p>
+          自信がない方、初心者の方も大歓迎！雰囲気やスケジュールはリンク先のInstagramからどうぞ！
+        </p>
+      </>
+    ),
+  },
+  {
     to: "https://app.notion.com/p/b9dbd385278f824aa473011f371b0b1b?v=816bd385278f8229aea40814d4fb3b53&source=copy_link",
     title: "タリン市内ミュージアムカレンダー",
     image: museumCalImg,
     imageAlt: "タリン市内ミュージアムカレンダー",
-    updatedAt: "2026/08/06",
     description: (
       <>
         <p>
@@ -99,12 +135,6 @@ export default function EestiPortal() {
                 </div>
               </div>
 
-              {/* 最終更新日 */}
-              {card.updatedAt && (
-                <div className="text-right text-xs md:text-sm font-bold text-[#0072ce]">
-                  最終更新日 : {card.updatedAt}
-                </div>
-              )}
             </div>
           </div>
         ))}
