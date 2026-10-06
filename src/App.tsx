@@ -7,6 +7,7 @@ import { Header } from "./components/0. Header";
 import { Footer } from "./components/Footer";
 
 import "./styles/globals.css";
+import AboutEstonia from "./pages/eesti-portal/AboutEstonia";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/jpee-plus-lab" element={<JpeePlusLab />} />
           <Route path="/eesti-portal" element={<EestiPortal />} />
           <Route path="/eesti-portal/qa" element={<QA />} />
+          <Route path="/eesti-portal/about-estonia" element={<AboutEstonia />} />
         </Routes>
         <Footer />
       </div>

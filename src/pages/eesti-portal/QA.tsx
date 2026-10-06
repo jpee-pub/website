@@ -6,8 +6,8 @@ export default function QA() {
   const contentRef = React.useRef<HTMLElement | null>(null);
 
   return (
-    <div className="pt-28 pb-16 px-4 max-w-5xl mx-auto min-h-[80vh] flex flex-col">
-      <div className="mb-12">
+    <div className="pt-28 pb-16 px-4 max-w-5xl mx-auto min-h-[80vh] flex flex-col min-w-0 w-full">
+      <div className="mb-12 min-w-0 w-full">
         <h1 className="text-4xl font-black tracking-wide text-[#0072ce] mb-3">留学・移住直前Q&A</h1>
         <section className="intro-section space-y-4 text-gray-700 leading-relaxed p-6">
           <p>
@@ -33,7 +33,7 @@ export default function QA() {
         <TableOfContents contentRef={contentRef} />
 
         {/* セクション 1 */}
-        <div ref={contentRef}>
+        <div ref={contentRef} className="min-w-0 w-full">
           <section className="space-y-8">
             <h2 className="section-title">
               渡航までのスケジュールと手続き
@@ -481,7 +481,7 @@ export default function QA() {
             <p>海外渡航に向けての準備はわからないことが多く、不安やストレスでいっぱいになることもあるかもしれませんが、新しい国・環境での生活がすてきなものになりますように。応援しています！</p>
             <p>もしこれから海外での新生活を控えている方や、海外生活経験者の方で、「もっとこんなことが聞いてみたい！」「自分のときにこんな情報があったら良かった！」ということがありましたら、ぜひコメントで教えてください。</p>
             <p>また、こちらのインタビュー動画では、エストニア在住のAkemiが社会人留学への準備についてや現地での学生生活について語っています。ぜひ合わせてご覧ください〜！</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UorWvpd0z-4?si=WKuVH9NPEAPO2FOv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="block w-full max-w-full aspect-video" src="https://www.youtube.com/embed/UorWvpd0z-4?si=WKuVH9NPEAPO2FOv" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </section>
         </div>
 

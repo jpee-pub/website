@@ -8,7 +8,7 @@ interface EestiMendanCTAProps {
 
 export const EestiMendanCTA: React.FC<EestiMendanCTAProps> = ({
   href = "https://docs.google.com/forms/d/e/1FAIpQLSe4SzZW0w_pslbPzqFWr1t3RL4i_D5M1u5nHg_4Zg53jfxqFw/viewform?usp=header",
-  className = "fixed bottom-6 right-6 z-50 w-[300px] hover:scale-105 transition-all duration-300 cursor-pointer",
+  className = "fixed bottom-1.5 right-1.5 z-50 block w-[8.5rem] max-w-[calc(100vw-0.75rem)] overflow-hidden md:bottom-2 md:right-2 md:w-44 md:hover:scale-105 transition-transform duration-300 cursor-pointer",
 }) => {
   return (
     <a

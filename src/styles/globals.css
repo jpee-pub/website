@@ -192,6 +192,8 @@
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
+  /* hidden だと sticky の基準が崩れる。clip は横スクロールだけ止める */
+  overflow-x: clip;
 }
 
 @layer utilities {
@@ -205,19 +207,33 @@ html {
     @apply space-y-4 p-2 mb-2;
   }
 
-  /* スクロール追従の質問ヘッダー */
+  /* スクロール追従の質問ヘッダー
+     backdrop-filter を sticky 本体に付けると、Android Chrome では
+     下スクロール中だけヘッダーが描画されない。ぼかしは ::before に分離する。 */
   .qa-header {
-    @apply sticky top-20 z-10 bg-white/60 backdrop-blur p-4 rounded-xl text-xl font-bold text-[#0072ce] flex items-start gap-3 transition-all;
+    @apply sticky top-20 z-10 p-2 md:p-4 rounded-xl font-bold text-[#0072ce] flex items-start gap-2 md:gap-3;
+  }
+
+  .qa-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-color: rgb(255 255 255 / 0.78);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    pointer-events: none;
   }
 
   /* 質問番号 (Q1, Q2...) */
   .qa-number {
-    @apply font-sekuya text-6xl font-black leading-none shrink-0;
+    @apply font-sekuya text-3xl md:text-6xl font-black leading-none shrink-0;
   }
 
   /* 質問文 */
   .qa-title-text {
-    @apply leading-snug text-2xl pt-1;
+    @apply leading-snug text-sm md:text-2xl pt-0.5 md:pt-1 min-w-0;
   }
 
   /* 質問者のコメントボックス (Rai) */

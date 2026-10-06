@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import akemiQaImg from "../../assets/akemi_qa.png";
+import estonianClubImg from "../../assets/estonian_study_club.jpg";
 import museumCalImg from "../../assets/museum_calendar.png";
-import estMendanCTA from "../../assets/est_mendan_button.png";
 import { EestiMendanCTA } from "../../components/EestiMendanCTA";
 
 interface PortalCardItem {
@@ -27,6 +27,28 @@ const PORTAL_CARDS: PortalCardItem[] = [
         </p>
         <p>
           実際に海外で暮らした経験者の「これはやっておけばよかった！」というお得な情報も必見です👀
+        </p>
+      </>
+    ),
+  },
+  {
+    to: "https://www.instagram.com/estonian_studyclub/",
+    title: "Estonian Self Study Club",
+    image: estonianClubImg,
+    imageAlt: "Estonian Self Study Club",
+    updatedAt: "2026/09/20",
+    description: (
+      <>
+        <p>
+          Akemiさんが主催の、タリンでエストニア語を学習中の方向けの勉強会です。タリン市内のカフェで不定期開催中。参加の際のエストニア語レベルは不問です。
+        </p>
+        <p>
+          「エストニア語の練習相手がいない…」<br />
+          「勉強を続けるモチベーションを保つのが難しい」<br />
+          そんな悩みをお持ちの方は、ぜひ一度覗いてみてくださいね。
+        </p>
+        <p>
+          自信がない方、初心者の方も大歓迎！雰囲気やスケジュールはリンク先のInstagramからどうぞ！
         </p>
       </>
     ),

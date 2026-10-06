@@ -55,6 +55,16 @@ export function Alliance() {
             );
           })}
         </div>
+        <div className="my-10 flex justify-center">
+          <iframe
+            src="https://discord.com/widget?id=873894999769612329&theme=dark"
+            className="w-full max-w-md block"
+            height="300"
+            allowTransparency={true}
+            frameBorder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
+        </div>
         <div className="text-center">
           <a
             href="https://discord.gg/mFhrJtusyK"

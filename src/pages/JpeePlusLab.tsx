@@ -1,5 +1,5 @@
 import React from "react";
-import poePanicImg from "../assets/poepanic.png";
+import poePanicImg from "../assets/poepanic_thumb.gif";
 
 export default function JpeePlusLab() {
   return (
@@ -13,20 +13,18 @@ export default function JpeePlusLab() {
 
       {/* Link Card */}
       <a
-        href="https://www.roua12tnt.com/poe_panic/poe_panic_redi_beta"
+        href="https://www.roua12tnt.com/poe_panic/poe_panic"
         target="_blank"
         rel="noopener noreferrer"
         className="w-full max-w-4xl bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 flex flex-col sm:flex-row border border-gray-100 min-h-[380px]"
       >
-        {/* Left Side: Game Screenshot (Cropped to focus on the game board and hide browser UI) */}
-        <div className="w-full sm:w-1/2 bg-[#ffebeb] overflow-hidden relative flex items-center justify-center min-h-[280px] sm:min-h-0">
-          <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-            <img
-              src={poePanicImg}
-              alt="Poe Panic! ゲーム画面"
-              className="w-full h-full object-cover scale-[1.08] -translate-y-[3%]"
-            />
-          </div>
+        {/* Left Side: Game Screenshot */}
+        <div className="w-full sm:w-1/2 bg-[#ffebeb] overflow-hidden flex items-center justify-center">
+          <img
+            src={poePanicImg}
+            alt="Poe Panic! ゲーム画面"
+            className="w-full h-auto"
+          />
         </div>
 
         {/* Right Side: Game Info */}
@@ -46,7 +44,7 @@ export default function JpeePlusLab() {
 
           <div className="text-right mt-6">
             <span className="text-sm font-semibold text-[#0072ce]">
-              最終更新日 : 2026/08/06
+              最終更新日 : 2026/09/20
             </span>
           </div>
         </div>

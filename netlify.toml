@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/api/note-rss"
+  to = "https://note.com/jpee_plus/rss"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/youtube-rss"
+  to = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLnlzGn2uutPeObUOWMtdg5mgqwn0JxiBV"
+  status = 200
+  force = true

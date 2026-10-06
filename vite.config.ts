@@ -59,7 +59,20 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port: 3000,
-      allowedHosts: mode === 'development' ? true : []
+      allowedHosts: mode === 'development' ? true : [],
+      proxy: {
+        '/api/note-rss': {
+          target: 'https://note.com',
+          changeOrigin: true,
+          rewrite: () => '/jpee_plus/rss',
+        },
+        '/api/youtube-rss': {
+          target: 'https://www.youtube.com',
+          changeOrigin: true,
+          rewrite: () =>
+            '/feeds/videos.xml?playlist_id=PLnlzGn2uutPeObUOWMtdg5mgqwn0JxiBV',
+        },
+      },
     },
   };
 });
